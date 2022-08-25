@@ -1,0 +1,46 @@
+---
+#Config Description
+  - name: Description Interface
+    cisco.ios.ios_interface:
+       aggregate:
+         - { name: "{{ item.name }}", description: "{{ item.description }}" }
+    loop: "{{ interface }}"     
+    register: vlan_output
+  - debug:
+        var: vlan_output.stdout_lines
+
+
+# Add Interface to Vlan access
+  - name: Add vlan
+    cisco.ios.ios_l2_interfaces:
+      config:
+      - name: "{{ item.name }}"
+        mode: "{{ item.mode }}"
+        access:
+            vlan: "{{ item.vlan }}"
+      state: replaced
+    loop: "{{ interface }}"
+    when: item.mode == "access"
+
+  #   register: vlan_output
+  # - debug:
+  #        var: vlan_output.stdout_lines
+
+# Add Interface to Vlan trunk
+  - name: Add vlan
+    cisco.ios.ios_l2_interfaces:
+      config:
+      - name: "{{ item.name }}"
+        mode: "{{ item.mode }}"
+        trunk:
+            allowed_vlans: "{{ item.vlan }}"
+            native_vlan: 1
+      state: replaced
+    loop: "{{ interface }}"
+    when: item.mode == "trunk"
+
+  #   register: vlan_output
+  # - debug:
+  #        var: vlan_output.stdout_lines
+...
+

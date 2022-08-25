@@ -1,0 +1,25 @@
+interface:
+- {name: FastEthernet0/1, vlan: 10, description: GE1, mode: access}
+- {name: FastEthernet0/2, vlan: 10, description: GE2, mode: access}
+- {name: FastEthernet0/3, vlan: 22, description: GE3, mode: access}
+- {name: FastEthernet0/4, vlan: 4, description: GE4, mode: access}
+- {name: FastEthernet0/5, vlan: 4, description: GE5, mode: access}
+- {name: FastEthernet0/6, vlan: 10, description: GE6, mode: access}
+- {name: FastEthernet0/7, vlan: "10,22", description: GE7, mode: trunk}
+- {name: FastEthernet0/8, vlan: 4, description: GE8, mode: access}
+- {name: FastEthernet0/9, vlan: 10, description: GE9, mode: access}
+- {name: FastEthernet0/10, vlan: 4, description: GE10, mode: access}
+- {name: FastEthernet0/11, vlan: 4, description: GE11, mode: access}
+- {name: FastEthernet0/12, vlan: 22, description: GE12, mode: access}
+- {name: FastEthernet0/13, vlan: 22, description: GE13, mode: access}
+- {name: FastEthernet0/14, vlan: 4, description: GE14, mode: access}
+- {name: FastEthernet0/15, vlan: 4, description: GE15, mode: access}
+- {name: FastEthernet0/16, vlan: "4,10", description: GE16, mode: trunk}
+- {name: FastEthernet0/17, vlan: 4, description: GE17, mode: access}
+- {name: FastEthernet0/18, vlan: 10, description: GE18, mode: access}
+- {name: FastEthernet0/19, vlan: "22,10,4", description: GE19, mode: trunk}
+- {name: FastEthernet0/20, vlan: 4, description: GE20, mode: trunk}
+- {name: FastEthernet0/21, vlan: 2, description: GE21, mode: access}
+- {name: FastEthernet0/22, vlan: 4, description: GE22, mode: access}
+- {name: FastEthernet0/23, vlan: 4, description: GE23, mode: access}
+- {name: FastEthernet0/24, vlan: 10, description: GE24, mode: access}

@@ -1,0 +1,10 @@
+  - name: Change Pass User
+    cisco.ios.ios_user:
+      name: "{{user}}"
+      configured_password: "{{pass_ssh}}"
+      password_type: password
+
+  - name: Change Pass enable
+    cisco.ios.ios_config:
+      lines:
+          enable password {{pass_enable}}

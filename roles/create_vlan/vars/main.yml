@@ -1,0 +1,7 @@
+vlan_list_server:
+        - { id: "1",vlan_name: "VLAN1" }
+        - { id: "4",vlan_name: "VLAN4" } 
+        - { id: "255",vlan_name: "VLAN255" }
+
+vlan_list_office:
+        - {vlan_id: "", vlan_name: "VLAN "}

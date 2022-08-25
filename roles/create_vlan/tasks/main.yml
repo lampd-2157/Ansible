@@ -1,0 +1,9 @@
+ - name: Create vlan
+   ios_vlan:
+     aggregate:
+       - {vlan_id: "{{ item.id }}", name: "{{ item.vlan_name }}" }
+   loop: "{{ vlan_list_server }}"
+
+   register: vlan_output
+ - debug:
+        var: vlan_output.stdout_lines

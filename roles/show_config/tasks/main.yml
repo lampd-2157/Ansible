@@ -1,0 +1,12 @@
+---
+ - name: Show config
+   cisco.ios.ios_command:
+      commands:
+         - show ip interface brief
+         - show version
+         - show vlan 
+         - show interface description  
+   register: config_output
+ - debug:
+          var: config_output.stdout_lines
+...
